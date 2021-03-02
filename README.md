@@ -23,6 +23,10 @@ Feel free to check out the Official Website for Econoshi_Bot too! --> https://ec
 
 -----------------------------------------------------------------------------------
 
+Bot was made with Love and Crappy Coding lmao
+
+-----------------------------------------------------------------------------------
+
 And of course, as I will always say, have fun with the commands and making a bot!
 
 -----------------------------------------------------------------------------------
