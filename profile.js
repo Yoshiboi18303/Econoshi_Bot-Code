@@ -32,9 +32,15 @@ module.exports.run = async (bot, message, args) => {
     if(super_vip === null) super_vip = 'No'
     if(super_vip === true) super_vip = 'Purchased/Owned'
 
-let lucky_clover = await db.fetch(`lucky_${message.guild.id}_${user.id}`)
-  if(lucky_clover === null) lucky_clover = 'No'
-  if(lucky_clover === true) lucky_clover = 'Purchased/Owned'
+  let lucky_clover = await db.fetch(`lucky_${message.guild.id}_${user.id}`)
+    if(lucky_clover === null) lucky_clover = 'No'
+    if(lucky_clover === true) lucky_clover = 'Purchased/Owned'
+
+
+  let lucky_pillow = await db.fetch(`pillow_${message.guild.id}_${user.id}`)
+    if(lucky_pillow === null) lucky_pillow = 'No'
+    if(lucky_pillow === true) lucky_pillow = 'Purchased/Owned'
+
   
   let shoes = await db.fetch(`nikes_${message.guild.id}_${user.id}`)
   if(shoes === null) shoes = '0'
@@ -54,12 +60,34 @@ let lucky_clover = await db.fetch(`lucky_${message.guild.id}_${user.id}`)
   let oceanfront = await db.fetch(`oceanfront_${message.guild.id}_${user.id}`)
   if(oceanfront === null) oceanfront = '0'
 
+  let reactor = await db.fetch(`reactor_${message.guild.id}_${user.id}`)
+  if(reactor === null) reactor = '0'
+
+  let coolant = await db.fetch(`coolant_${message.guild.id}_${user.id}`)
+  if(coolant === null) coolant = '0'
+
+  let water = await db.fetch(`water_${message.guild.id}_${user.id}`)
+  if(water === null) water = '0'
+
+  let heatant = await db.fetch(`heatant_${message.guild.id}_${user.id}`)
+  if(heatant === null) heatant = '0'
+
+  let heater = await db.fetch(`heater_${message.guild.id}_${user.id}`)
+  if(heater === null) heater = '0'
+
+  let reactorcon = await db.fetch(`reactorcontainment_${message.guild.id}_${user.id}`)
+  if(reactorcon === null) reactorcon = '0'
+
+  let security = await db.fetch(`security_${message.guild.id}_${user.id}`)
+  if(security === null) security = '0'
+
+
   
 
 
   let moneyEmbed = new Discord.MessageEmbed()
   .setColor("#00FF02")
-  .setDescription(`**${user}'s Profile**\n\n**Money**\n\n Pocket: ${money}\nBank: ${bank}\n\n**VIP Rank Statuses**\n\nBronze VIP: ${bronze_vip}\nSilver VIP: ${silver_vip}\nGold VIP: ${gold_vip}\nPlatinum VIP: ${platinum_vip}\nSuper VIP: ${super_vip}\n\n**Other Item Statuses**\n\nLucky Clover: ${lucky_clover}\n\n**Inventory**\n\nYoshi Sneakers: ${shoes}\nCars: ${newcar}\nMansions: ${newhouse}\nLaptops: ${laptop}\nAquariums: ${aquarium}\nOceanfront Houses: ${oceanfront}`);
+  .setDescription(`**${user}'s Profile**\n\n**Money**\n\n Pocket: ${money}\nBank: ${bank}\n\n**VIP Rank Statuses**\n\nBronze VIP: ${bronze_vip}\nSilver VIP: ${silver_vip}\nGold VIP: ${gold_vip}\nPlatinum VIP: ${platinum_vip}\nSuper VIP: ${super_vip}\n\n**Other Item Statuses**\n\nLucky Clover: ${lucky_clover}\nLucky Pillow: ${lucky_pillow}\n\n**Inventory**\n\nYoshi Sneakers: ${shoes}\nCars: ${newcar}\nMansions: ${newhouse}\nLaptops: ${laptop}\nAquariums: ${aquarium}\nOceanfront Houses: ${oceanfront}\n Reactor Cores: ${reactor}\n\n**Reactor Core Items Inventory**\n\nCoolant Tanks: ${coolant}\nWater Bottles: ${water}\nHeatant Tanks: ${heatant}\nHeaters: ${heater}\nReactor Containments: ${reactorcon}\n\n**Hired People**\n\nSecurity: ${security}`);
   message.channel.send(moneyEmbed)
 };
 
