@@ -3,7 +3,7 @@ All the code for my bot Econoshi_Bot, you can add it with this link! --> https:/
 
 -----------------------------------------------------------------------------------
 
-All code written and made was using Glitch and is Protect by a MIT License. You can freely copy the code and use it for your own Economy Bot on Discord. Just make sure to credit me before doing it. :)
+All code written and made was using Glitch and is Protected by a MIT License. You can freely copy the code and use it for your own Economy Bot on Discord. Just make sure to credit me before doing it. :)
 
 -----------------------------------------------------------------------------------
 
