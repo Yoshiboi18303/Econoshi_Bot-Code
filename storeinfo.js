@@ -81,6 +81,54 @@ module.exports.run = async (bot, message, args) => {
       .setColor("#B5DE14")
         message.channel.send(embed)
 
+  } else if(args[0] == 'pillow') {
+     let embed = new Discord.MessageEmbed()
+      .setDescription("**Lucky Pillow**\n\nBenefits: Role on Discord Server + More luck on the Gambling Commands (coming soon!)")
+      .setColor("#DAEF8A")
+        message.channel.send(embed)
+
+  } else if(args[0] == 'reactor') {
+     let aboutReactorEmbed = new Discord.MessageEmbed()
+      .setDescription("**Reactor Core**\n\nBenefits: Coins every 10 minutes the Reactor Core is alive (coming soon!), Role on Discord Server, Safety Checks (coming soon!) + More by leading the leaderboard")
+      .setColor("#6c1614")
+        message.channel.send(aboutReactorEmbed)
+
+  } else if(args[0] == 'coolant') {
+     let aboutCoolantEmbed = new Discord.MessageEmbed()
+      .setDescription("**Coolant**\n\nBenefits: Used to cool your Reactor Core a LOT (coming soon!)")
+      .setColor("#14E3E8")
+        message.channel.send(aboutCoolantEmbed)
+
+  } else if(args[0] == 'water') {
+     let aboutWaterEmbed = new Discord.MessageEmbed()
+      .setDescription("**Water**\n\nBenefits: Used to cool your Reactor Core slightly (coming soon!)")
+      .setColor("#d4f1f9")
+        message.channel.send(aboutWaterEmbed)
+
+  } else if(args[0] == 'heatant') {
+     let aboutHeatantEmbed = new Discord.MessageEmbed()
+      .setDescription("**Heatant**\n\nBenefits: Used to heat your Reactor Core a LOT (coming soon!)")
+      .setColor("#C11D1D")
+        message.channel.send(aboutHeatantEmbed)
+
+  } else if(args[0] == 'heater') {
+     let aboutHeaterEmbed = new Discord.MessageEmbed()
+      .setDescription("**Heater**\n\nBenefits: Used to heat your Reactor Core slightly (coming soon!)")
+      .setColor("#6246CB")
+        message.channel.send(aboutHeaterEmbed)
+
+  } else if(args[0] == 'reactorcon') {
+     let aboutReactorContainmentEmbed = new Discord.MessageEmbed()
+      .setDescription("**Reactor Containment**\n\nBenefits: Used to keep your Reactor Safe if all things go wrong (coming soon!)")
+      .setColor("#BF4001")
+        message.channel.send(aboutReactorContainmentEmbed)
+
+  } else if(args[0] == 'security') {
+     let aboutSecurityEmbed = new Discord.MessageEmbed()
+      .setDescription("**Security**\n\nBenefits: Used to stop a Robber from robbing you (coming soon!)")
+      .setColor("#00A0FF")
+        message.channel.send(aboutSecurityEmbed)
+
 
   }
 
@@ -89,5 +137,5 @@ module.exports.run = async (bot, message, args) => {
   
   module.exports.help = {
     name:"storeinfo",
-    aliases: ["si","info","store_info","benefit_info"]
+    aliases: ["si","info","store_info","benefit_info","about"]
   }
