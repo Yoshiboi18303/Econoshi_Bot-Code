@@ -222,11 +222,162 @@ module.exports.run = async (bot, message, args) => {
        message.channel.send(buySuccessEmbed)
 
 
+    } else if(args[0] == 'pillow') {
+       let buyFailureEmbed = new Discord.MessageEmbed()
+       .setColor("#FF0000")
+       .setDescription(`<:Cross:618736602901905418> Idiot. You need 900 coins to purchase a Lucky Pillow`)
+
+       if (author < 900) return message.channel.send(buyFailureEmbed)
+
+       db.fetch(`pillow_${message.guild.id}_${user.id}`)
+       db.set(`pillow_${message.guild.id}_${user.id}`, true)
+
+
+       let buySuccessEmbed = new Discord.MessageEmbed()
+       .setColor("#00FF02")
+       .setDescription(`<:Check:618736570337591296> Nice job! You've purchased a Lucky Pillow for 900 Coins!`)
+
+       db.subtract(`money_${message.guild.id}_${user.id}`, 900)
+       message.channel.send(buySuccessEmbed)
+
+
+    } else if(args[0] == 'reactor') {
+       let buyFailureEmbed = new Discord.MessageEmbed()
+       .setColor("#FF0000")
+       .setDescription(`<:Cross:618736602901905418> Idiot. You need 9999 coins to purchase a Reactor Core`)
+
+       if (author < 9999) return message.channel.send(buyFailureEmbed)
+
+       db.fetch(`reactor_${message.guild.id}_${user.id}`)
+       db.add(`reactor_${message.guild.id}_${user.id}`, 1)
+
+
+       let buySuccessEmbed = new Discord.MessageEmbed()
+       .setColor("#00FF02")
+       .setDescription(`<:Check:618736602901905418> Nice job! You've purchased a Reactor Core for 9999 Coins (please take care of it)!`)
+
+       db.subtract(`money_${message.guild.id}_${user.id}`, 9999)
+       message.channel.send(buySuccessEmbed)
+
+
+    } else if(args[0] == 'coolant') {
+       let buyFailureEmbed = new Discord.MessageEmbed()
+       .setColor("#FF0000")
+       .setDescription(`<:Cross:618736602901905418> Idiot. You need 650 coins to purchase a Coolant Tank.`)
+
+       if (author < 650) return message.channel.send(buyFailureEmbed)
+
+       db.fetch(`coolant_${message.guild.id}_${user.id}`)
+       db.add(`coolant_${message.guild.id}_${user.id}`, 1)
+
+
+       let buySuccessEmbed = new Discord.MessageEmbed()
+       .setColor("#00FF02")
+       .setDescription(`<:Check:618736602901905418> Nice job! You've purchased a Coolant Tank for 650 Coins!`)
+
+       db.subtract(`money_${message.guild.id}_${user.id}`, 650)
+       message.channel.send(buySuccessEmbed)
+
+
+    } else if(args[0] == 'water') {
+       let buyFailureEmbed = new Discord.MessageEmbed()
+       .setColor("#FF0000")
+       .setDescription(`<:Cross:618736602901905418> Idiot. You need 100 coins to purchase some Water.`)
+
+       if (author < 100) return message.channel.send(buyFailureEmbed)
+
+       db.fetch(`water_${message.guild.id}_${user.id}`)
+       db.add(`water_${message.guild.id}_${user.id}`, 1)
+
+
+       let buySuccessEmbed = new Discord.MessageEmbed()
+       .setColor("#00FF02")
+       .setDescription(`<:Check:618736602901905418> Nice job! You've purchased some Water for 100 Coins!`)
+
+       db.subtract(`money_${message.guild.id}_${user.id}`, 100)
+       message.channel.send(buySuccessEmbed)
+
+
+    } else if(args[0] == 'heatant') {
+       let buyFailureEmbed = new Discord.MessageEmbed()
+       .setColor("#FF0000")
+       .setDescription(`<:Cross:618736602901905418> Idiot. You need 700 coins to purchase a Heatant Tank.`)
+
+       if (author < 700) return message.channel.send(buyFailureEmbed)
+
+       db.fetch(`heatant_${message.guild.id}_${user.id}`)
+       db.add(`heatant_${message.guild.id}_${user.id}`, 1)
+
+
+       let buySuccessEmbed = new Discord.MessageEmbed()
+       .setColor("#00FF02")
+       .setDescription(`<:Check:618736602901905418> Nice job! You've purchased a Heatant Tank for 700 Coins!`)
+
+       db.subtract(`money_${message.guild.id}_${user.id}`, 700)
+       message.channel.send(buySuccessEmbed)
+
+
+    } else if(args[0] == 'heater') {
+       let buyFailureEmbed = new Discord.MessageEmbed()
+       .setColor("#FF0000")
+       .setDescription(`<:Cross:618736602901905418> Idiot. You need 150 coins to purchase a Heater.`)
+
+       if (author < 150) return message.channel.send(buyFailureEmbed)
+
+       db.fetch(`heater_${message.guild.id}_${user.id}`)
+       db.add(`heater_${message.guild.id}_${user.id}`, 1)
+
+
+       let buySuccessEmbed = new Discord.MessageEmbed()
+       .setColor("#00FF02")
+       .setDescription(`<:Check:618736602901905418> Nice job! You've purchased a Heater for 150 Coins!`)
+
+       db.subtract(`money_${message.guild.id}_${user.id}`, 150)
+       message.channel.send(buySuccessEmbed)
+
+    } else if(args[0] == 'reactorcon') {
+       let buyFailureEmbed = new Discord.MessageEmbed()
+       .setColor("#FF0000")
+       .setDescription(`<:Cross:618736602901905418> Idiot. You need 999 coins to purchase a Reactor Containment.`)
+
+       if (author < 999) return message.channel.send(buyFailureEmbed)
+
+       db.fetch(`reactorcontainment_${message.guild.id}_${user.id}`)
+       db.add(`reactorcontainment_${message.guild.id}_${user.id}`, 1)
+
+
+       let buySuccessEmbed = new Discord.MessageEmbed()
+       .setColor("#00FF02")
+       .setDescription(`<:Check:618736602901905418> Nice job! You've purchased a Reactor Containment for 999 Coins!`)
+
+       db.subtract(`money_${message.guild.id}_${user.id}`, 999)
+       message.channel.send(buySuccessEmbed)
+
+
+    } else if(args[0] == 'security') {
+       let buyFailureEmbed = new Discord.MessageEmbed()
+       .setColor("#FF0000")
+       .setDescription(`<:Cross:618736602901905418> Idiot. You need 1250 coins to hire a Security.`)
+
+       if (author < 1250) return message.channel.send(buyFailureEmbed)
+
+       db.fetch(`security_${message.guild.id}_${user.id}`)
+       db.add(`security_${message.guild.id}_${user.id}`, 1)
+
+
+       let buySuccessEmbed = new Discord.MessageEmbed()
+       .setColor("#00FF02")
+       .setDescription(`<:Check:618736602901905418> Nice job! You've hired a Security for 1250 Coins!`)
+
+       db.subtract(`money_${message.guild.id}_${user.id}`, 1250)
+       message.channel.send(buySuccessEmbed)
+
+
     } else {
-        let embed3 = new Discord.MessageEmbed()
+        let noItemSpecifiedFailureEmbed = new Discord.MessageEmbed()
         .setColor("#FF0000")
-        .setDescription('<:Cross:618736602901905418> Hey man, you need to enter an item to buy for this command to function correctly! [Yoshi+store]')
-        message.channel.send(embed3)
+        .setDescription('<:Cross:618736602901905418> Hey man, you need to enter an item to buy for this command to function correctly! Run Yoshi+store for all the valid Responses!')
+        message.channel.send(noItemSpecifiedFailureEmbed)
     }
 
 }
