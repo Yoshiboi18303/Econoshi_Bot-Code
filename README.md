@@ -1,5 +1,5 @@
 # Econoshi_Bot-Code
-All the code for my bot Econoshi_Bot, you can add it with this link! --> https://discord.com/oauth2/authorize?client_id=814688655510732820&amp;scope=bot&amp;permissions=8
+All the code for my bot Econoshi_Bot, you can add it with this link! --> https://discord.com/oauth2/authorize?client_id=814688655510732820&scope=bot&permissions=1074252800
 
 -----------------------------------------------------------------------------------
 
@@ -15,7 +15,7 @@ Original Code: https://glitch.com/edit/#!/ghost-econ
 
 -----------------------------------------------------------------------------------
 
-Main Code Language is JavaScript (.js files), every single main command (which shows with Yoshi+help) is written in JavaScript.
+Main Code Language is JavaScript (.js files), every single main command (which shows with Ecoshi+help) is written in JavaScript.
 
 -----------------------------------------------------------------------------------
 
