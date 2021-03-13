@@ -1,3 +1,5 @@
+"You can change the ownerID code if you want. :)"
+
 const Discord = require("discord.js");
 const db = require("quick.db");
 
