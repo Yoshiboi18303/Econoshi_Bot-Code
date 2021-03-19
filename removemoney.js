@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 const db = require("quick.db");
 
 module.exports.run = async (bot, message, args) => {
-  if(!message.content.startsWith('Yoshi+'))return;  
+  if(!message.content.startsWith('Ecoshi+'))return;  
   let ownerID = '697414293712273408'
   if(message.author.id !== ownerID) return;
 
