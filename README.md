@@ -9,9 +9,9 @@ All code written and made was using Glitch and is Protected by a MIT License. Yo
 
 The code written was remixed off of GhostGenix's Original Code, check him out!
 
-Their YouTube Channel: https://www.youtube.com/channel/UCRDxYBCF60gsgxb0u9Z49_Q
+Their [YouTube Channel](https://www.youtube.com/channel/UCRDxYBCF60gsgxb0u9Z49_Q)
 
-Original Code: https://glitch.com/edit/#!/ghost-econ
+The [Original Code](https://glitch.com/edit/#!/ghost-econ)
 
 -----------------------------------------------------------------------------------
 
